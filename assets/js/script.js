@@ -14,10 +14,10 @@ let scanner = new Instascan.Scanner({ video: document.getElementById('pre') });
 
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
-              if(cameras.length == 2 ){
-                  scanner.start(cameras[1]
-              }else {scanner.start(cameras[0]);}
-          
+          console.log("Camera Length :"+cameras.length)
+          if(cameras.length == 2 ){
+            scanner.start(cameras[1]);
+          }else {scanner.start(cameras[0]);}
         } else {
           console.error('No cameras found.');
         }
