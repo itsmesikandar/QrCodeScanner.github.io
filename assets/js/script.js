@@ -26,6 +26,7 @@ let scanner = new Instascan.Scanner({ video: document.getElementById('pre') });
       });
 
       openDialogBtn.addEventListener("click", ()=> {
+        dialog.close();
         window.open(result, '_blank');
       })
 
