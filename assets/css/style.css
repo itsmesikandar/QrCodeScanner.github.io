@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', 'Calibri', Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+	  line-height: 1.5;
+    height: 100%;
+}
+
+.border-red {
+  border: 5px solid red;
+}
+
+#preview {
+  width: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vw;
+}
+
+.showcase {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 0%;
+	left: 0%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.content {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+	z-index: 2;
+}
+
+.content img{
+  width: 100%;
+}
+
+.content p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	border: solid #fff 1px;
+	margin-top: 25px;
+	opacity: 0.7;
+}
+
+.btn:hover {
+	transform: scale(0.98);
+}
+
+.intro {
+  font-size: 3rem;
+  font-family: 'Unica One' ;
+  text-transform: uppercase;
+  color: #c31;
+}
+
+#about {
+	text-align: center;
+}
+
+
+#about p {
+	font-size: 24px;
+  width: 100%;
+  font-family: 'Vollkorn';
+  padding-left: 50px;
+  padding-right: 50px;
+  color: rgb(92, 92, 92);
+}
+
+.section-with-deco::before {
+  font-weight: 900;
+  display: block;
+
+}
+
+#about h2 {
+  font-family: 'Unica One';
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #c31;
+  margin-top: 1.2em;
+  margin-bottom: 0;
+  font-size: 32px;
+	/* color: var(--primary-color); */
+}
+
+#four {
+  margin-bottom: 40px;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px;
+  min-width: 30ch;
+  max-width: 40ch;
+  min-height: 30ch;
+  max-height: 50ch;
+  border: 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  border-radius: 5px;
+}
+
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+#openDia{
+  border: 0;
+  background-color: #552CF6;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#closeDia{
+  border: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(4, 1, 12);
+  font-weight: 500;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+#dCont {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+  max-height: 100px;
+  overflow-y: auto;
+  color: #552CF6;
+  line-height: 1.2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bottomButtons {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+@media screen and (min-width : 1100px) {
+  .modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    min-width: 30ch;
+    max-width: 40ch;
+    min-height: 30ch;
+    max-height: 45ch;
+    background-color: #fff;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  }
+
+
+  #openDia{
+    border: 0;
+    background-color: #552CF6;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: sans-serif;
+  }
+  
+  #closeDia{
+    border: 0;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(4, 1, 12);
+    font-weight: 500;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+  
+  
+  #dCont {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 400;
+    max-height: 80px;
+    overflow-y: auto;
+    color: #552CF6;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+  
+  
+}
+
+@media screen and (max-width : 576px) {
+  .modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    min-height: 30ch;
+    max-height: 45ch;
+    min-width: 35ch;
+    max-width: 40ch;
+  }
+
+  #dCont {
+    font-size: 16px;
+    font-family: sans-serif;
+  
+    max-height: 80px;
+    overflow-y: auto;
+    color: #552CF6;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+
+  .content {
+    position: absolute;
+    bottom: 10%;
+    right: 2%;
+    z-index: 2;
+  }
+  .content img{
+    width: 70%;
+  }
+
+  .content p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.2;
+  }
+
+  
+}
