@@ -306,7 +306,7 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 10px;
-    min-width: 30ch;
+    min-width: 35ch;
     max-width: 35ch;
     min-height: 30ch;
     max-height: 30ch;
