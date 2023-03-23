@@ -16,12 +16,10 @@ let scanner = new Instascan.Scanner({ video: document.getElementById('pre') });
 
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
-          console.log("Camera Length :"+cameras.length)
           if(cameras.length == 2 ){
-            let firefoxAgent = userAgentString.indexOf("Firefox") > -1;
-            if(!firefoxAgent){}
-            scanner.start(cameras[1]);
-          }else {scanner.start(cameras[0]);}
+             scanner.start(cameras[1])
+          }else {
+            scanner.start(cameras[0]);}
         } else {
           console.error('No cameras found.');
         }
@@ -39,7 +37,6 @@ let scanner = new Instascan.Scanner({ video: document.getElementById('pre') });
         dialog.close();
         scanner.start()
       })
-
 
       scanImage.addEventListener("click", () => {
         const fileInput = document.createElement("input");
