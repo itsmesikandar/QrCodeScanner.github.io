@@ -17,9 +17,16 @@ let scanner = new Instascan.Scanner({ video: document.getElementById('pre') });
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
           if(cameras.length == 2 ){
+<<<<<<< HEAD
              scanner.start(cameras[1])
           }else {
             scanner.start(cameras[0]);}
+=======
+            //let firefoxAgent = userAgentString.indexOf("Firefox") > -1;
+            //if(!firefoxAgent){}
+            scanner.start(cameras[1]);
+          }else {scanner.start(cameras[0]);}
+>>>>>>> 1cba804e5737472f7471199abccc9d68a586b498
         } else {
           console.error('No cameras found.');
         }
