@@ -16,8 +16,14 @@ let scanner = new Instascan.Scanner({ video: document.getElementById('pre') });
 
       Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
+          let userAgent = navigator.userAgent;
+            
           if(cameras.length == 2 ){
-            scanner.start(cameras[1]);
+            if(userAgent.match(/firefox|fxios/i)){
+              scanner.start(cameras[0])
+            }else {
+              scanner.start(cameras[1]);
+            }
           }else {scanner.start(cameras[0]);}  
         } else {
           console.error('No cameras found.');
