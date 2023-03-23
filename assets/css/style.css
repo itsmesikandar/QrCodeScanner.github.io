@@ -72,18 +72,24 @@ body, html {
 
 .content {
   position: absolute;
+  bottom: 5%;
+	z-index: 1;
+}
+
+.image-scan{
+  position: absolute;
   bottom: 10%;
   right: 5%;
-	z-index: 2;
+  z-index: 2;
 }
 
 .content img{
-  width: 100%;
+  width: 70%;
 }
 
 .content p {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   margin-bottom: 5px;
   line-height: 1.5;
 }
@@ -146,6 +152,10 @@ body, html {
   margin-bottom: 40px;
 }
 
+#dialog_title {
+  font-family: 'Unica One';
+}
+
 .modal-dialog {
   position: absolute;
   top: 50%;
@@ -153,10 +163,10 @@ body, html {
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 10px;
-  min-width: 30ch;
+  min-width: 40ch;
   max-width: 40ch;
   min-height: 30ch;
-  max-height: 50ch;
+  max-height: 30ch;
   border: 0;
   background-color: #ffffff;
   box-shadow: 0 0 1em rgb(0 0 0 / .3);
@@ -176,7 +186,8 @@ body, html {
   color: white;
   font-weight: 400;
   width: 100%;
-  margin-top: 10px;
+  font-size: 16px;
+  font-family: sans-serif;
 }
 
 #closeDia{
@@ -184,23 +195,30 @@ body, html {
   display: block;
   padding: 10px;
   border-radius: 5px;
-  color: rgb(4, 1, 12);
-  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
   width: 100%;
+  font-size: 17px;
+  font-family: sans-serif;
   margin-top: 10px;
 }
-
 
 #dCont {
   font-size: 18px;
   font-family: sans-serif;
   font-weight: 400;
-  max-height: 100px;
+  max-height: 5px;
+  min-height: 60px;
   overflow-y: auto;
-  color: #552CF6;
+  color: #000000;
   line-height: 1.2;
   margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 10px;
+  white-space: nowrap;
+  background-color: #f0f0f0;
+  margin-top: 30px;
+  font-family: 'Vollkorn';
+
 }
 
 .bottomButtons {
@@ -215,7 +233,7 @@ body, html {
 
 
 
-@media screen and (min-width : 1100px) {
+/* @media screen and (min-width : 1100px) {
   .modal-dialog {
     position: absolute;
     top: 50%;
@@ -223,10 +241,10 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 10px;
-    min-width: 30ch;
+    min-width: 40ch;
     max-width: 40ch;
     min-height: 30ch;
-    max-height: 45ch;
+    max-height: 30ch;
     background-color: #fff;
     border: 0;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
@@ -265,15 +283,20 @@ body, html {
     font-size: 18px;
     font-family: sans-serif;
     font-weight: 400;
-    max-height: 80px;
+    max-height: 5px;
+    min-height: 60px;
     overflow-y: auto;
-    color: #552CF6;
+    color: #000000;
     line-height: 1.2;
     margin-top: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    background-color: #f0f0f0;
+    margin-top: 30px;
   }
   
   
-}
+}*/
 
 @media screen and (max-width : 576px) {
   .modal-dialog {
@@ -283,13 +306,13 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 10px;
+    min-width: 30ch;
+    max-width: 35ch;
     min-height: 30ch;
-    max-height: 45ch;
-    min-width: 35ch;
-    max-width: 40ch;
+    max-height: 30ch;
   }
 
-  #dCont {
+  /* #dCont {
     font-size: 16px;
     font-family: sans-serif;
   
@@ -298,24 +321,48 @@ body, html {
     color: #552CF6;
     line-height: 1.2;
     margin-top: 10px;
-  }
+  } */
 
   .content {
     position: absolute;
-    bottom: 10%;
-    right: 2%;
+    bottom: 6%;
+    left: -5%;
     z-index: 2;
   }
   .content img{
-    width: 70%;
+    width: 50%;
   }
 
   .content p {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 400;
     margin-bottom: 5px;
-    line-height: 1.2;
+    line-height: 1.2; 
+    word-break: 3;
+    visibility: hidden;
+    content: "Scan on Android";
   }
 
   
+} 
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  
+  border-radius: 0px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dcdcdc; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #552CF6; 
 }

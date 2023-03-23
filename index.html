@@ -47,10 +47,8 @@
 
       <script type="text/javascript" src="assets/js/instascan.min.js"></script>
       <link rel="stylesheet" href="/assets/css/style.css">
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
       <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-    
+      <script type="text/javascript" src="https://unpkg.com/@zxing/browser@latest"></script>
       <meta name="ahrefs-site-verification" content="d7ff52f5eb8334dafc77d1ec606f10c19d418b8ca17ab4202ba7a078994bcf40">
     </head>
   <body>
@@ -83,10 +81,14 @@
 			<div class="video-container">
 				<video id="pre"></video>
 			</div>
+
+      <div class="image-scan">
+        <img src="assets/images/scan-image.svg"/>
+      </div>
       <div class="content">	
 				<!-- <h3>Checkout for Android</h3> -->
         <a href="https://play.google.com/store/apps/details?id=com.dev.qrcodescanner" target="_blank"> <img src="/assets/images/appstore-android.svg"> </a>
-        <p>Scan and create<br>All type of Code.</p>
+        <p>Scan and create All type of Code.</p>
       </div>
 		</section>
 
@@ -112,10 +114,11 @@
         </p>
         <div class="bottomButtons">
           <button id="openDia">Open</button>
-          <button id="closeDia" class="cta">Scan again</button>
+          <button id="closeDia" class="cta">Scan Again</button>
         </div>
       </div>
     </dialog>
     <script type="text/javascript" src="assets/js/script.js" ></script>
+
   </body>
 </html>
