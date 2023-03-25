@@ -111,30 +111,29 @@ body, html {
 }
 
 .intro {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: 'Unica One' ;
   text-transform: uppercase;
   color: #c31;
+  margin-top: 20px;
+  text-align: center;
 }
-
-#about {
-	text-align: center;
-}
-
 
 #about p {
-	font-size: 24px;
-  width: 100%;
+	font-size: 20px;
   font-family: 'Vollkorn';
-  padding-left: 50px;
-  padding-right: 50px;
   color: rgb(92, 92, 92);
 }
 
 .section-with-deco::before {
-  font-weight: 900;
+  font-weight: 600;
   display: block;
+}
 
+#allAbout {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
 }
 
 #about h2 {
@@ -144,12 +143,12 @@ body, html {
   color: #c31;
   margin-top: 1.2em;
   margin-bottom: 0;
-  font-size: 32px;
+  font-size: 25px;
 	/* color: var(--primary-color); */
 }
 
 #four {
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 #dialog_title {
@@ -218,7 +217,6 @@ body, html {
   background-color: #f0f0f0;
   margin-top: 30px;
   font-family: 'Vollkorn';
-
 }
 
 .bottomButtons {
@@ -230,8 +228,6 @@ body, html {
   bottom: 0;
   left: 0;
 }
-
-
 
 /* @media screen and (min-width : 1100px) {
   .modal-dialog {
@@ -349,7 +345,11 @@ body, html {
     visibility: hidden;
   }
 
-  
+  #allAbout {
+    width: 100%;
+    padding: 10px;
+  }
+
 } 
 
 ::-webkit-scrollbar {
