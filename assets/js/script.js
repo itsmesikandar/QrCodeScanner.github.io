@@ -5,7 +5,7 @@ const resultContent = document.getElementById("dCont")
 const scanImage = document.querySelector(".image-scan")
 var resultt;
 
-let scanner = new Instascan.Scanner({ video: document.getElementById('pre') });
+let scanner = new Instascan.Scanner({ video: document.getElementById('pre'),mirror: false });
       scanner.addListener('scan', function (content) {
         console.log(content);
         resultContent.innerHTML = content;
